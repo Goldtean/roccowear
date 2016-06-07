@@ -19,6 +19,7 @@
 
 </head>
 <body>
+  <!-- FB -->
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -35,6 +36,46 @@
        js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- Gander -->
+  <script type="text/javascript">
+    numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
+    count = 0;
+    var getRandom = function () {
+      
+      bangnum = function () {
+        num = Math.floor(Math.random() * numArray.length);
+        return numArray[num]
+      };
+
+      var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + bangnum() + '.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
+      
+      if (numArray.length > 1) {
+        document.getElementById('gander-again-id').innerHTML = 'Gander Again';
+        document.getElementById('hag').innerHTML = 'GANDER AGAIN';
+
+        return imgTag;
+      }
+      else {
+        count++;
+        if (count == 1) {
+          document.getElementById('gander-again-id').innerHTML = 'I THINK YOU\'VE HAD ENOUGH.';
+          document.getElementById('hag').innerHTML = 'I THINK YOU\'VE HAD ENOUGH.';
+
+        }
+        else if (count == 2) {
+          document.getElementById('gander-again-id').innerHTML = 'DAMNIT, I SAID YOU\'VE GANDERED ENOUGH!';
+          document.getElementById('hag').innerHTML = 'DAMNIT, I SAID YOU\'VE GANDERED ENOUGH!';
+        }
+        else if (count == 3) {
+          document.getElementById('gander-again-id').innerHTML = 'FINE! I\'LL REWIND THE DAMN TAPE!';
+          document.getElementById('hag').innerHTML = 'FINE! I\'LL REWIND THE DAMN TAPE!';
+          count = 0;
+          numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
+          
+        }
+      }
+    }
   </script>
 
     <nav class="navbar">
@@ -110,40 +151,9 @@
             </div>
           </div>
         </div>
-        <script type="text/javascript">
-          numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
-          count = 0;
-          var getRandom = function () {
-            
-            bangnum = function () {
-              num = Math.floor(Math.random() * numArray.length);
-              return numArray[num]
-            };
 
-            var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + bangnum() + '.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
-            
-            if (numArray.length > 1) {
-              document.getElementById('gander-again-id').innerHTML = 'Gander Again';
-              return imgTag;
-            }
-            else {
-              count++;
-              if (count < 5) {
-                document.getElementById('gander-again-id').innerHTML = 'I think you\'ve had enough.';
-              }
-              else if (count < 10) {
-                document.getElementById('gander-again-id').innerHTML = 'Damnit, I said you\'ve gandered enough!';
-              }
-              else if (count == 10) {
-                count = 0;
-                numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
-                document.getElementById('gander-again-id').innerHTML = 'That\'s it! Now you\'re going to get it!';
-              }
-            }
-          }
-        </script>
         <div id="have-a-gander" class="content text-center">
-          <div><a id="gander-again-id" class="links btn btn-default" href="#">Gander Again</a></div>
+          <div><a id="gander-again-id" class="links btn btn-default visible-xs" href="#">Gander Again</a></div>
           <!-- Script for hacker eyes only -->
         </div>
         <!-- Logo XS -->

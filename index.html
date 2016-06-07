@@ -6,16 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Rocco Wear scarves blankets hats hand made in Canada">
-  <meta name="author" content="Ieronim Oltean">
+  <meta name="Ieronim Oltean IMMIGRANT Wed Development" content="Rocco Wear">
+  <!-- R Icon -->
+  <link rel="shortcut icon" href="ico/patch.ico">
 
   <title>Rocco Wear</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/8f0e417f7a.js"></script>
+
 </head>
 <body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '172532579816613',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
 
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 <!--     <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
@@ -39,51 +59,75 @@
 
   <div class="container">
     <div class="row">
+      <div class="bottom-navi col-md-12 col-lg-12 text-center links">
+        <a id="tg" href="#">THE GOODS</a><span> | </span>
+        <a id="gtg" href="#">GIMMIE THE GOODS!</a><span> | </span>
+        <a id="wmts" href="#">WHO MAKES THIS STUFF?</a><span> | </span>
+        <a id="hag" href="#">HAVE A GANDER</a>
+      </div>
+    </div>
 
+    <div class="row">
+      <!-- Logo -->
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
-       <!-- Button trigger modal -->
 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-body">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <ul>
-            <li><a href="#">THE GOODS</a></li>
-            <li><a href="#">GIMMIE THE GOODS!</a></li>
-            <li><a href="#">WHO MAKES THIS STUFF?</a></li>
-            <li><a href="#">HAVE A GANDER</a></li>
-          </ul>
-
+      <!-- Content -->
+      <div id="stuff" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div id="the-goods" class="content text-center">
+          <p>Rocco Wear sells thick, comfy scarves, blankets, and hats. Our products can be purchased at <a href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items">Etsy.</a></p>
+          <br>
+          <br>
+          <br>
+          <button href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</button>
         </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
 
-
-
-
-
-      <div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle rocco-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Rocco Menu <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">THE GOODS</a></li>
-            <li><a href="#">GIMMIE THE GOODS!</a></li>
-            <li><a href="#">WHO MAKES THIS STUFF?</a></li>
-            <li><a href="#">HAVE A GANDER</a></li>
-          </ul>
+        <div id="gimmie-the-goods" class="content text-center">
+          <p>Get a hold of me!</p>
+          <button href="tel://1-778-321-7699" class="btn btn-lg btn-default"><i class="fa fa-volume-control-phone"></i> | 778-321-7699</button>
+          <button href="" class="btn btn-lg btn-default"><i class="fa fa-envelope"></i> | Email</button>
+          <button href="https://www.facebook.com/Rocco-Wear-183259421721047/" class="btn btn-lg btn-default"><i class="fa fa-facebook"></i> | Facebook</button>
+          <button href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-lg btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</button>
         </div>
+
+        <div id="who-makes-this-stuff" class="content text-center">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" src="img/ro.jpg" class="img-responsive img-circle img-custom" alt="">
+              <p class="col-md-6"><b>ROXANA OLTEAN</b><br>
+                 Founder & CEO<br>
+                 Hates Pants</p>            
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" src="img/mo.jpg" class="img-responsive img-circle img-custom" alt="">
+              <p class="col-md-6"><b>MARIANA OLTEAN</b><br>
+                 Designer<br>
+                 Michael Bolton Fan</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" src="img/js.jpg" class="img-responsive img-circle img-custom" alt="">
+              <p class="col-md-6"><b>JOEL SHANE</b><br>
+                 Graphic Designer<br>
+                 Loves To Make Art</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" src="img/jo.jpg" class="img-responsive img-circle img-custom" alt="">
+              <p class="col-md-6"><b>JEREMY OLTEAN</b><br>
+                 Made This Site<br>
+                 Pre Ordered A Tesla</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="have-a-gander" class="content text-center">
+          <!-- Script -->
+        </div>
+
       </div>
 
     </div>
 
   </div>
+
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>

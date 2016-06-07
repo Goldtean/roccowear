@@ -32,11 +32,12 @@
        var js, fjs = d.getElementsByTagName(s)[0];
        if (d.getElementById(id)) {return;}
        js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
   </script>
-<!--     <nav class="navbar">
+
+    <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -45,31 +46,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand rocco-wear-brand" href="#">ROCCO WEAR</a>
             </div>
-            <div id="navbar-collapse-1" class="menu navbar-middle collapse navbar-collapse col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div id="navbar-collapse-1" class="menu navbar-middle collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul class="nav navbar-nav">
-                <li class="links"><a href="#">THE GOODS</a></li>
-                <li class="links"><a href="#">GIMMIE THE GOODS!</a></li>
-                <li class="links"><a href="#">WHO MAKES THIS STUFF?</a></li>
-                <li class="links"><a href="#">HAVE A GANDER</a></li>
+                <li class="links"><a id="tg" href="#">THE GOODS</a></li>
+                <li class="links"><a id="gtg" href="#">GIMMIE THE GOODS!</a></li>
+                <li class="links"><a id="wmts" href="#">WHO MAKES THIS STUFF?</a></li>
+                <li class="links"><a id="hag" href="#">HAVE A GANDER</a></li>
               </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
   <div class="container">
     <div class="row">
-      <div class="bottom-navi col-md-12 col-lg-12 text-center links">
-        <a id="tg" href="#">THE GOODS</a><span> | </span>
-        <a id="gtg" href="#">GIMMIE THE GOODS!</a><span> | </span>
-        <a id="wmts" href="#">WHO MAKES THIS STUFF?</a><span> | </span>
-        <a id="hag" href="#">HAVE A GANDER</a>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Logo -->
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
+      <!-- Logo SM MD LG XL -->
+      <div class="hidden-xs hidden-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
 
       <!-- Content -->
       <div id="stuff" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -117,11 +110,44 @@
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+          numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
+          count = 0;
+          var getRandom = function () {
+            
+            bangnum = function () {
+              num = Math.floor(Math.random() * numArray.length);
+              return numArray[num]
+            };
 
+            var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + bangnum() + '.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
+            
+            if (numArray.length > 1) {
+              document.getElementById('gander-again-id').innerHTML = 'Gander Again';
+              return imgTag;
+            }
+            else {
+              count++;
+              if (count < 5) {
+                document.getElementById('gander-again-id').innerHTML = 'I think you\'ve had enough.';
+              }
+              else if (count < 10) {
+                document.getElementById('gander-again-id').innerHTML = 'Damnit, I said you\'ve gandered enough!';
+              }
+              else if (count == 10) {
+                count = 0;
+                numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
+                document.getElementById('gander-again-id').innerHTML = 'That\'s it! Now you\'re going to get it!';
+              }
+            }
+          }
+        </script>
         <div id="have-a-gander" class="content text-center">
-          <!-- Script -->
+          <div><a id="gander-again-id" class="links btn btn-default" href="#">Gander Again</a></div>
+          <!-- Script for hacker eyes only -->
         </div>
-
+        <!-- Logo XS -->
+        <div class="visible-xs visible-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
       </div>
 
     </div>
@@ -130,7 +156,7 @@
 
 
   <!-- jQuery -->
-  <script src="js/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
   <!-- IMMIGRANT scripts for immigranting real good -->

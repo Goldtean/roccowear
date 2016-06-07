@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('.links').on('click', '#gtg', gimmieTheGoods);
     $('.links').on('click', '#wmts', whoMakesThisStuff);
     $('.links').on('click', '#hag', haveAGander);
+    $('#have-a-gander').on('click', '.links', ganderAgain);
 });
 
 var theGoods = function(event) {
@@ -29,11 +30,24 @@ var haveAGander = function(event) {
   $('#gander-pic').remove();
   $("#have-a-gander").append(getRandom());
   $("#have-a-gander").show();
+  numArray.splice(num, 1);
 }
 
-var getRandom = function () {
-  var num = Math.floor((Math.random() * 26) + 1);
-  var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + num + '.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
-  return imgTag;
+
+
+var ganderAgain = function () {
+  event.preventDefault();
+  $('#gander-pic').remove();
+  $("#have-a-gander").append(getRandom());
+  $("#have-a-gander").show();
+  numArray.splice(num, 1);
+
 }
-      
+
+// Close Menu In XS After Selection
+
+$(function () {
+  $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+    $('.navbar-toggle:visible').click();
+  });
+});

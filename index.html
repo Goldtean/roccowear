@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Rocco Wear scarves blankets hats hand made in Canada">
-  <meta name="Ieronim Oltean IMMIGRANT Wed Development" content="Rocco Wear">
+  <meta name="Ieronim Oltean IMMIGRANT Wed Development" content="Rocco Wear Scarves Blankets Hats Beanies Wool Cotton Hand Made">
   <!-- R Icon -->
   <link rel="shortcut icon" href="ico/patch.ico">
 
@@ -19,41 +19,20 @@
 
 </head>
 <body>
-  <!-- FB -->
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '172532579816613',
-        xfbml      : true,
-        version    : 'v2.6'
-      });
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
   <!-- Gander -->
   <script type="text/javascript">
     numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
     count = 0;
     var getRandom = function () {
-      
       bangnum = function () {
         num = Math.floor(Math.random() * numArray.length);
         return numArray[num]
       };
-
-      var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + bangnum() + '.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
+      var imgTag = '<img src="wireframe/RoccoLogoPhotoBook' + bangnum() + '.jpg" class="links col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
       
       if (numArray.length > 1) {
-        document.getElementById('gander-again-id').innerHTML = 'Gander Again';
-        document.getElementById('hag').innerHTML = 'GANDER AGAIN';
-
+        document.getElementById('gander-again-id').innerHTML = 'HAVE ANOTHER GANDER';
+        document.getElementById('hag').innerHTML = 'HAVE ANOTHER GANDER';
         return imgTag;
       }
       else {
@@ -61,49 +40,49 @@
         if (count == 1) {
           document.getElementById('gander-again-id').innerHTML = 'I THINK YOU\'VE HAD ENOUGH.';
           document.getElementById('hag').innerHTML = 'I THINK YOU\'VE HAD ENOUGH.';
-
+          return '<img src="wireframe/gander1.jpeg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
         }
         else if (count == 2) {
           document.getElementById('gander-again-id').innerHTML = 'DAMNIT, I SAID YOU\'VE GANDERED ENOUGH!';
           document.getElementById('hag').innerHTML = 'DAMNIT, I SAID YOU\'VE GANDERED ENOUGH!';
+          return '<img src="wireframe/gander2.jpeg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-responsive" id="gander-pic">';
         }
         else if (count == 3) {
           document.getElementById('gander-again-id').innerHTML = 'FINE! I\'LL REWIND THE DAMN TAPE!';
           document.getElementById('hag').innerHTML = 'FINE! I\'LL REWIND THE DAMN TAPE!';
           count = 0;
           numArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17", "18", "19", "20", "21", "22", "23","24","25","26"];
-          
         }
       }
     }
   </script>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand rocco-wear-brand" href="#">ROCCO WEAR</a>
-            </div>
-            <div id="navbar-collapse-1" class="menu navbar-middle collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <ul class="nav navbar-nav">
-                <li class="links"><a id="tg" href="#">THE GOODS</a></li>
-                <li class="links"><a id="gtg" href="#">GIMMIE THE GOODS!</a></li>
-                <li class="links"><a id="wmts" href="#">WHO MAKES THIS STUFF?</a></li>
-                <li class="links"><a id="hag" href="#">HAVE A GANDER</a></li>
-              </ul>
-            </div>
-        </div>
-    </nav>
-
+  <!-- Navbar -->
+  <nav class="navbar">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand rocco-wear-brand" data-toggle="collapse" data-target="#navbar-collapse-1" href="#">ROCCO WEAR</a>
+          </div>
+          <div id="navbar-collapse-1" class="menu collapse navbar-collapse col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul class="nav navbar-nav">
+              <li class="links"><a id="tg" href="#">THE GOODS</a></li>
+              <li class="links"><a id="gtg" href="#">GIMMIE THE GOODS!</a></li>
+              <li class="links"><a id="wmts" href="#">WHO MAKES THIS STUFF?</a></li>
+              <li class="links"><a id="hag" href="#">HAVE A GANDER</a></li>
+            </ul>
+          </div>
+      </div>
+  </nav>
+  <!-- This is where shit gets real -->
   <div class="container">
     <div class="row">
       <!-- Logo SM MD LG XL -->
-      <div class="hidden-xs hidden-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
+      <div class="hidden-xs hidden-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="btn"><img class="rocco-top img-responsive" src="img/rwlogo.png"></a></div>
 
       <!-- Content -->
       <div id="stuff" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -112,15 +91,15 @@
           <br>
           <br>
           <br>
-          <button href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</button>
+          <a href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</a>
         </div>
 
         <div id="gimmie-the-goods" class="content text-center">
-          <p>Get a hold of me!</p>
-          <button href="tel://1-778-321-7699" class="btn btn-lg btn-default"><i class="fa fa-volume-control-phone"></i> | 778-321-7699</button>
-          <button href="" class="btn btn-lg btn-default"><i class="fa fa-envelope"></i> | Email</button>
-          <button href="https://www.facebook.com/Rocco-Wear-183259421721047/" class="btn btn-lg btn-default"><i class="fa fa-facebook"></i> | Facebook</button>
-          <button href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-lg btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</button>
+          <p>Get a hold of Rocco Wear!</p>
+          <a href="tel://1-778-321-7699" class="btn btn-lg btn-default"><i class="fa fa-volume-control-phone"></i> | 778-321-7699</a><br>
+          <a href="#" class="btn btn-lg btn-default"><i class="fa fa-envelope"></i> | Email</a>
+          <a href="https://www.facebook.com/Rocco-Wear-183259421721047/" class="btn btn-lg btn-default"><i class="fa fa-facebook"></i> | Facebook</a><br>
+          <a href="https://www.etsy.com/ca/shop/RoccoWear?ref=pr_shop_more#items" class="btn btn-lg btn-default"><i class="fa fa-shopping-bag"></i> | Shop Rocco Wear</a><br>
         </div>
 
         <div id="who-makes-this-stuff" class="content text-center">
@@ -153,17 +132,20 @@
         </div>
 
         <div id="have-a-gander" class="content text-center">
-          <div><a id="gander-again-id" class="links btn btn-default visible-xs" href="#">Gander Again</a></div>
+          <div><a id="gander-again-id" class="links btn btn-default" href="#">HAVE ANOTHER GANDER</a></div>
           <!-- Script for hacker eyes only -->
         </div>
-        <!-- Logo XS -->
-        <div class="visible-xs visible-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a data-toggle="modal" href="#myModal1" class="btn"><img class="img-responsive" src="img/rwlogo.png"></a></div>
-      </div>
+        
+      </div> <!-- Content / Stuff -->
+    </div> <!-- Row -->
+  </div> <!-- Container -->
 
+  <div class="container">
+    <div class="row text-center footer">
+      <!-- Logo XS -->
+      <div class="visible-xs visible-sm col-xs-12 col-sm-12 col-md-6 col-lg-6"><a href="#" class="btn"><img class="img-responsive rocco-bottom" src="img/rwlogo.png"></a></div>
     </div>
-
   </div>
-
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
